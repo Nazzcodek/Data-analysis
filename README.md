@@ -1,6 +1,6 @@
 # A D2B Assessment project
 
-Etracted .csv files from S3Bucket into my local storage as
+Etracted .csv files from S3Bucket into my local storage as in import_files
 - orders.csv
 - reviews.csv
 - shipments_deliveries.csv
