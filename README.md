@@ -1,6 +1,6 @@
 # A D2B Assessment project
 
-Etracted .csv files from S3Bucket into my local storage as in import_files
+Etracted .csv files from S3Bucket into my local storage as in [import_files](https://github.com/Nazzcodek/assesment/tree/main/import_files)
 - orders.csv
 - reviews.csv
 - shipments_deliveries.csv
