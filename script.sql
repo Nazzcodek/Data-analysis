@@ -55,8 +55,8 @@ SELECT CURRENT_DATE as ingestion_date,
                  JOIN nasibell8682_staging.orders o ON s.order_id = o.order_id
                  WHERE s.delivery_date IS NULL AND s.shipment_date IS NULL AND date '2022-09-05' >= o.order_date + INTERVAL '15' DAY), 0) as tt_undelivered_items;
 
-       -- create the best_performing_product table 
-       CREATE TABLE nasibell8682_analytics.best_performing_product (
+-- create the best_performing_product table 
+CREATE TABLE nasibell8682_analytics.best_performing_product (
   ingestion_date DATE PRIMARY KEY NOT NULL,
   product_name VARCHAR(255) NOT NULL,
   most_ordered_day DATE NOT NULL,
