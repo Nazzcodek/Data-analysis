@@ -51,7 +51,7 @@ The dependencies listed in requirements.txt
 3. run `Makefile` to lint and format the `.py` extension files
 3. Run `main.py` to extract the CSV files from the S3 bucket and load them into the `nasibell8682_staging` schema in PostgreSQL.
 4. Run the SQL queries in `scripts.sql` to transform the data and create the tables in the `nasibell8682_analytics` schema.
-5. Deploy `export.py` using `main.tf` to export the tables in `nasibell_analytics` to the S3 bucket.
+5. Deploy `export.py` using `main.tf` to export the tables in `nasibell8682_analytics` to the S3 bucket.
 
 ### Using Terraform
 In `main.tf` the code doesn't include any provision for `IAM Role` or `Policy` which are requirements to successfuly provision using terraform, as a user with no permission to create a role or access any role within the organization AWS account, a personal account was used to create a role and added the required policy i.e `AmazonS3FullAccess` and `AmazonRDSFullAccess` to successful deploy using terraform. The ARN of the role created in the user's AWS account is what was used to create the lambda function used for the deployment.
