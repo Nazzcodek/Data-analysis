@@ -12,9 +12,9 @@ bucket_name = "d2b-internal-assessment-bucket"
 response = s3.list_objects(Bucket=bucket_name, Prefix="orders_data")
 
 # Extracting data from source
-s3.download_file(bucket_name, "orders_data/orders.csv", "orders.csv")
-s3.download_file(bucket_name, "orders_data/reviews.csv", "reviews.csv")
-s3.download_file(bucket_name, "orders_data/shipment_deliveries.csv", "shipments_deliveries.csv")
+s3.download_file(bucket_name, "orders_data/orders.csv", "import_files/orders.csv")
+s3.download_file(bucket_name, "orders_data/reviews.csv", "import_files/reviews.csv")
+s3.download_file(bucket_name, "orders_data/shipment_deliveries.csv", "import_files/shipments_deliveries.csv")
 
 
 # Load data from CSV files into PostgreSQL staging tables
