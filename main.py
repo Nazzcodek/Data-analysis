@@ -62,9 +62,6 @@ def load_data(staging_area_file):
 
             # Insert data into the staging table
             cursor.copy_expert(f"COPY nasibell8682_staging.{table_name} FROM STDIN WITH (FORMAT CSV, HEADER TRUE)", f)
-            # values = ','.join(['%s' for _ in range(len(header))])
-            # insert_query = f"INSERT INTO nasibell8682_staging.{table_name} ({','.join(header)})  VALUES ({values})"
-            # cursor.executemany(insert_query, data)
 
         # Commit the changes and close the connection
         connection.commit()
@@ -85,13 +82,3 @@ files = [orders, reviews, shipments_deliveries]
 # Iterate over the files and load each one
 for file in files:
     load_data(file)
-
-with open(orders, "r") as f:
-    data = csv.reader(f)
-    header_row = next(data)  # Read the header row
-
-    primary_key_column = header_row[0]
-
-table_name = os.path.splitext(os.path.basename(orders))[0]
-print(table_name)
-print(primary_key_column)
