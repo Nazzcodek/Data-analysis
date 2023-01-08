@@ -77,17 +77,14 @@ def load_data(staging_area_file):
 
 
 # List of files to load
-orders = "orders.csv"
-reviews = "reviews.csv"
-shipments_deliveries = "shipments_deliveries.csv"
+orders = "import_files/orders.csv"
+reviews = "import_files/reviews.csv"
+shipments_deliveries = "import_files/shipments_deliveries.csv"
 files = [orders, reviews, shipments_deliveries]
 
 # Iterate over the files and load each one
 for file in files:
     load_data(file)
-# load_data(orders)
-# load_data(reviews)
-# load_data(shipments_deliveries)
 
 with open(orders, "r") as f:
     data = csv.reader(f)
