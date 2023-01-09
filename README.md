@@ -1,6 +1,6 @@
 [![Makefile CI](https://github.com/Nazzcodek/assesment/actions/workflows/makefile.yml/badge.svg)](https://github.com/Nazzcodek/assesment/actions/workflows/makefile.yml)
 # A D2B Assessment project
-This project is an ETL data analysis using data engineering principles that uses Python and PostgreSQL to extract, transform, and load data from CSV files in an AWS S3 bucket into a PostgreSQL database. The transformed data is then exported back to the S3 bucket as CSV files.
+This project is an ETL data analysis using data engineering principles (CI/CD) that uses Python and PostgreSQL to extract, transform, and load data from CSV files in an AWS S3 bucket into a PostgreSQL database. The transformed data is then exported back to the S3 bucket as CSV files. Makefile is used for Continuous Integration of the codes while terraform for Continuous Delivery to meet DevOps best practice. The terraform status badge is showing failed is because i don't have the credentials for the AWS account and don't know if I'm to use my personal credentials.
 
 # ETL data analysis using Python and PostgreSQL
 ### Resources 
@@ -49,7 +49,7 @@ The dependencies listed in requirements.txt
 
 1. Set up my AWS account and PostgreSQL database.
 2. Install the dependencies using `pip install -r requirements.txt`.
-3. run `Makefile` to lint and format the `.py` extension files
+3. run `Makefile` to lint and format the `.py` extension files for continuous integration CI
 3. Run `main.py` to extract the CSV files from the S3 bucket and load them into the `nasibell8682_staging` schema in PostgreSQL.
 4. Run the SQL queries in `scripts.sql` to transform the data and create the tables in the `nasibell8682_analytics` schema.
 5. Deploy `export.py` using `main.tf` to export the tables in `nasibell8682_analytics` to the S3 bucket.
