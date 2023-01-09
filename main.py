@@ -33,7 +33,7 @@ def load_data(staging_area_file):
         table_name = os.path.splitext(os.path.basename(staging_area_file))[0]
 
         # Read data from the file
-        with open(staging_area_file, "r") as f:
+        with open(staging_area_file, "r",  encoding='utf-8') as f:
             data = csv.reader(f)
             header_row = next(data)  # Read the header row
 
