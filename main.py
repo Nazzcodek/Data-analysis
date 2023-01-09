@@ -68,7 +68,7 @@ def load_data(staging_area_file):
         cursor.close()
         connection.close()
 
-    except Exception as error:
+    except psycopg2.OperationalError as error:
         # Log error and handle exception
         logging.error(error)
 
