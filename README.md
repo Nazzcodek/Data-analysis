@@ -1,3 +1,4 @@
+[![Makefile CI](https://github.com/Nazzcodek/assesment/actions/workflows/makefile.yml/badge.svg)](https://github.com/Nazzcodek/assesment/actions/workflows/makefile.yml)
 # A D2B Assessment project
 This project is an ETL data analysis using data engineering principles that uses Python and PostgreSQL to extract, transform, and load data from CSV files in an AWS S3 bucket into a PostgreSQL database. The transformed data is then exported back to the S3 bucket as CSV files.
 
