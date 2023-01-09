@@ -42,7 +42,7 @@ def export_table_to_s3(table_name):
         cursor.close()
         connection.close()
 
-    except Exception as error:
+    except psycopg2.OperationalError as error:
         # Log error and handle exception
         logging.error(error)
 
