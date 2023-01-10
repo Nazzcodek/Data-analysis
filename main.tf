@@ -1,7 +1,14 @@
+# defining variable
+variable {
+  var_a = "aws_access_key"
+  var_s = "aws_secret_key"
+
+}
+
 # Configure the AWS provider
 provider "aws" {
-  access_key = "${var.aws_access_key}"
-  secret_key = "${var.aws_secret_key}"
+  access_key = "${var.var_a}"
+  secret_key = "${var.var_s}"
   region     = "eu-central-1"
 }
 
