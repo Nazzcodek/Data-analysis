@@ -1,3 +1,12 @@
+# defining variables
+variable "AWS_ACCESS_KEY_ID" {
+  default = ""
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+  default = ""
+}
+
 # Configure the AWS provider
 provider "aws" {
   access_key = "${var.AWS_ACCESS_KEY_ID}"
