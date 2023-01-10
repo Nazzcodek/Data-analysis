@@ -1,6 +1,7 @@
 # Configure the AWS provider
 provider "aws" {
   region = "eu-central-1"
+  profile = "naziff"
 }
 
 # zipping the export.py python file
