@@ -3,7 +3,7 @@
 # A D2B Assessment project
 This project is an ETL data analysis using data engineering principles (CI/CD) that uses Python and PostgreSQL to extract, transform, and load data from CSV files in an AWS S3 bucket into a PostgreSQL database. The transformed data is then exported back to the S3 bucket as CSV files. 
 
-For CI/CD Github action is used, Makefile is used for Continuous Integration of the codes while terraform for Continuous Delivery to meet DevOps best practice. The terraform status badge is showing failing because i don't have the credentials for the AWS account and don't know if I'm to use my personal credentials but it run fine on my local environment.
+For CI/CD Github action is used, Makefile is used for Continuous Integration of the codes while terraform for Continuous Delivery to meet DevOps best practice. 
 
 # ETL data analysis using Python and PostgreSQL
 ### Resources 
