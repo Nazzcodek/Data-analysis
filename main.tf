@@ -1,14 +1,7 @@
-# defining variable
-variable {
-  var_a = "aws_access_key"
-  var_s = "aws_secret_key"
-
-}
-
 # Configure the AWS provider
 provider "aws" {
-  access_key = "${var.var_a}"
-  secret_key = "${var.var_s}"
+  access_key = "${{ secrets.AWS_ACCESS_KEY_ID }}"
+  secret_key = "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
   region     = "eu-central-1"
 }
 
@@ -19,6 +12,7 @@ type        = "zip"
 source_file = "${path.module}/export.py" 
 output_path = "export.zip"
 }
+
 
 # Create a Lambda function to run the export script
 resource "aws_lambda_function" "export_function" {
