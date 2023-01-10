@@ -58,7 +58,7 @@ The dependencies listed in requirements.txt
 5. Deploy `export.py` using `main.tf` to export the tables in `nasibell8682_analytics` to the S3 bucket.
 
 ### Using Terraform
-In `main.tf` the code doesn't include any provision for `IAM Role` or `Policy` which are requirements to successfuly provision using terraform, as a user with no permission to create a role or access any role within the organization AWS account, a personal account was used to create a role and added the required policy i.e `AmazonS3FullAccess` and `AmazonRDSFullAccess` to successful deploy using terraform. The ARN of the role created in the user's AWS account is what was used to create the lambda function used for the deployment.
+In `main.tf` the code doesn't include any provision for `IAM Role` or `Policy` which are requirements to successfuly provision using terraform, as a user with no permission to create a role or access any role within the organization AWS account, a personal account was used to create a role and added the required policy i.e `AmazonS3FullAccess` and `AmazonRDSFullAccess` to successful deploy using terraform. The ARN of the role created in the user's AWS account is what was used to create the lambda function used for the deployment. Github secrets is where the AWS credential are stored for the terraform configuration.
 
 To deploy using `main.tf` terraform file, three commands must be run using any CLI which are; 
 - `terraform init` prepares the working directory so Terraform can run the configuration
