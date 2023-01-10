@@ -1,8 +1,10 @@
 # Configure the AWS provider
 provider "aws" {
-  region = "eu-central-1"
-  profile = "naziff"
+  access_key = "${var.aws_access_key}"
+  secret_key = "${var.aws_secret_key}"
+  region     = "eu-central-1"
 }
+
 
 # zipping the export.py python file
 data "archive_file" "zip_the_exportpy_code" {
